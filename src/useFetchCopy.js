@@ -1,8 +1,9 @@
 import {useState, useEffect} from 'react'
-import {useLocalStorage} from 'tidbits/hooks/local-storage'
-import {isNullish} from 'tidbits/utils/primitives'
 
-import api from 'cw/api'
+import {useLocalStorage} from './useLocalStorage'
+import {isNullish} from './utils'
+
+import api from './api'
 
 export function useFetchCopy() {
   const [data, setData] = useLocalStorage('copyweasel.table', {disabled: true})

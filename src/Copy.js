@@ -1,8 +1,8 @@
 import React, {useContext} from 'react'
-import {isFunction} from 'tidbits/utils/primitives'
 
-import {CopyContext} from '../context'
-import {lookupCopy} from '../lookup-copy'
+import {CopyContext} from './context'
+import {lookupCopy} from './lookupCopy'
+import {isFunction} from './utils'
 
 export function Copy({as = 'span', copyKey, context, children, ...props}) {
   const [data, loading] = useContext(CopyContext)

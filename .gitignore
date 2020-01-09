@@ -2,3 +2,4 @@ node_modules
 dist
 src-old
 .parcel-cache
+yarn-error.log
