@@ -23,13 +23,11 @@ function getDevelopmentConfig(mode = 'development') {
   const config = getBaseConfig()
   return {
     ...config,
-    entry: './src/index',
     mode,
     devtool: 'eval-source-map',
     output: {
       filename: 'index.js',
-      path: path.resolve(__dirname, './dist'),
-      publicPath: '/'
+      path: path.resolve(__dirname, './dist')
     }
   }
 }
@@ -38,10 +36,11 @@ function getProductionConfig(mode = 'production') {
   const config = getBaseConfig()
   return {
     ...config,
-    entry: './src/index',
     output: {
       filename: 'index.js',
-      path: path.resolve(__dirname, './dist')
+      path: path.resolve(__dirname, './dist'),
+      library: 'react-copyweasel',
+      libraryTarget: 'umd'
     },
     mode,
     optimization: {
@@ -68,6 +67,7 @@ function getProductionConfig(mode = 'production') {
 
 function getBaseConfig() {
   return {
+    entry: './src/index',
     module: {
       rules: [
         {

@@ -1,6 +1,6 @@
 {
   "name": "react-copyweasel",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "React client for CopyWeasel.",
   "main": "dist/index.js",
   "author": "Luke Hodkinson",
